@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+		integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.8/angular.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+	<script src="./script.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" />
+	<link rel="stylesheet" href="./style.css" />
+	<title>Document</title>
+</head>
+
+<body ng-app="myApp" ng-controller="myCtrl">
+	<div class="ui container">
+		<div class="ui grid centered">
+			<div class="eight wide column">
+				<div class="ui segment raised">
+					<h1 class="ui header"><span class="iconSpan"><i class="icon pencil"></i></span>Notes</h1>
+					<div class="ui bulleted list">
+						<div class="ui item" ng-repeat="x in items">{{x}}
+							<span ng-click="removeItem($index)"><i class="icon red delete floated right"></i></span>
+						</div>
+					</div>
+					<div class="ui action input fluid">
+						<input ng-model="item" placeholder="Add item">
+						<button class="ui button teal" ng-click="addItem()">Add</button>
+					</div>
+					<p class="ui error">{{errortext}}</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

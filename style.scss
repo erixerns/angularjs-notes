@@ -1,0 +1,22 @@
+
+.container{
+	margin-top:50px;
+}
+
+// .column{
+// 	border:1px solid red;
+// }
+
+.icon.pencil{
+	font-size:2rem;
+}
+
+.icon.delete{
+	&:hover{
+		cursor: pointer;
+	}
+}
+
+.icon.delete{
+	float:right;
+}
